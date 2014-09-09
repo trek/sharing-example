@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SharingExample</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/sharing-example.css">
+  </head>
+  <body>
+    <script>
+      window.SharingExampleENV = {{ENV}};
+      window.EmberENV = window.SharingExampleENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/sharing-example.js"></script>
+    <script>
+      window.SharingExample = require('sharing-example/app')['default'].create(SharingExampleENV.APP);
+    </script>
+  </body>
+</html>
